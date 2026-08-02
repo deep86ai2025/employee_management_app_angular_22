@@ -1,5 +1,5 @@
 <div class="app-shell " [ngClass]="isSideBarOpen ? '':'sidebar-collapsed'">
-  <aside class="app-sidebar">
+  <aside class="app-sidebar app-card">
     <div class="sidebar-top">
       <button class="brand-icon" type="button">EM</button>
       <div class="brand-text">
@@ -23,7 +23,7 @@
   </aside>
 
   <div class="main-panel">
-    <header class="topbar">
+    <header class="topbar app-card">
       <button (click)="isSideBarOpen = !isSideBarOpen" class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
         <span></span>
         <span></span>
@@ -43,7 +43,7 @@
     </header>
 
     <main class="layout-content">
-      <section class="overview-panel">
+      <section class="overview-panel app-panel">
         <router-outlet></router-outlet>
       </section>
     </main>

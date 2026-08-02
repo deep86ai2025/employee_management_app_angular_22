@@ -7,10 +7,10 @@
 .dashboard-header,
 .dashboard-panel,
 .stat-card {
-	border: 1px solid rgba(44, 44, 42, 0.08);
+	border: 1px solid var(--card-border);
 	border-radius: 18px;
-	background: rgba(255, 255, 255, 0.94);
-	box-shadow: 0 12px 24px rgba(44, 44, 42, 0.04);
+	background: var(--card-bg);
+	box-shadow: var(--card-shadow);
 }
 
 .dashboard-header {
@@ -19,7 +19,7 @@
 	justify-content: space-between;
 	gap: 20px;
 	padding: 22px;
-	background: linear-gradient(135deg, rgba(245, 196, 179, 0.42), rgba(255, 255, 255, 0.94));
+	background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.42), var(--card-bg));
 }
 
 .section-title {
@@ -93,7 +93,7 @@
 }
 
 .stat-card--projects .stat-icon {
-	background: rgba(216, 90, 48, 0.12);
+	background: rgba(var(--secondary-rgb), 0.12);
 }
 
 .stat-card div:last-child {
@@ -141,7 +141,7 @@
 	min-width: 30px;
 	padding: 6px 9px;
 	border-radius: 999px;
-	background: rgba(245, 196, 179, 0.35);
+	background: rgba(var(--accent-rgb), 0.35);
 	color: var(--primary);
 	font-size: 0.75rem;
 	font-weight: 800;

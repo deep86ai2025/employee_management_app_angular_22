@@ -1,5 +1,5 @@
 <div class="projects-page">
-    <div class="page-header">
+    <div class="page-header app-card">
         <div>
             <p class="section-title">Project workspace</p>
             <h2>Manage projects</h2>
@@ -22,10 +22,10 @@
             <div class="project-grid row g-3">
                 @for (item of projectList(); track $index) {
                 <div class="col-md-4">
-                    <article class="project-card">
+                    <article class="project-card app-card">
                         <div class="project-card-topline">
                             <span class="project-id">{{item.projectName.charAt(0)}}</span>
-                            <span class="status-badge">{{item.startDate | date:'dd-MMM-yy'}}</span>
+                            <span class="status-badge app-badge">{{item.startDate | date:'dd-MMM-yy'}}</span>
                         </div>
                         <h4>{{item.projectName}}</h4>
                         <p class="client-name">{{item.clientName}}</p>
@@ -52,7 +52,7 @@
             </div>
         </section>
         @if (isFormVisiable) {
-        <section class="project-form-card col-lg-4" aria-labelledby="project-form-heading">
+        <section class="project-form-card app-card col-lg-4" aria-labelledby="project-form-heading">
             <div class="section-heading">
                 <div>
                     <p class="section-title">Project details</p>
@@ -113,7 +113,7 @@
 <div class="modal"  #empModal  id="employeeAssignmentModal" tabindex="-1"
     aria-labelledby="employeeAssignmentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content assignment-modal">
+        <div class="modal-content assignment-modal app-card">
             <div class="modal-header">
                 <div>
                     <p class="section-title">Project assignment</p>
@@ -186,7 +186,7 @@
                                         </td>
                                         <td>{{item.role}}</td>
                                         <td>{{item.assignedDate}}</td>
-                                        <td><span class="assignment-status">{{item.isActive?'Active':'De-Active'}}</span></td>
+                                        <td><span class="assignment-status app-badge">{{item.isActive?'Active':'De-Active'}}</span></td>
                                         <td class="assignment-actions">
                                             <button class="btn btn-ghost" type="button">Remove</button>
                                         </td>

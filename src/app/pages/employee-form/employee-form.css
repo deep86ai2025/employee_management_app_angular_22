@@ -6,15 +6,15 @@
 
 .form-card {
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(44, 44, 42, 0.08);
-  box-shadow: 0 14px 30px rgba(44, 44, 42, 0.04);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
 }
 
 .form-header {
   padding: 16px 18px;
-  border-bottom: 1px solid rgba(44, 44, 42, 0.06);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .section-title {
@@ -57,8 +57,8 @@
   width: 100%;
   padding: 10px 12px;
   border-radius: 14px;
-  border: 1px solid rgba(44, 44, 42, 0.12);
-  background: #fbf8f4;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
   color: var(--text);
   font-size: 0.96rem;
   outline: none;
@@ -66,8 +66,8 @@
 
 .field-group input:focus,
 .field-group select:focus {
-  border-color: rgba(153, 60, 29, 0.35);
-  box-shadow: 0 0 0 4px rgba(245, 196, 179, 0.18);
+  border-color: rgba(var(--primary-rgb), 0.45);
+  box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
 .form-actions {

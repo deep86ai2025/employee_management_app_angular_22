@@ -1,12 +1,36 @@
+ 
+
+
 :root {
-  --bg: #F1EFE8;
+  --bg: #F1F8F4;
   --surface: #FFFFFF;
-  --primary: #993C1D;
-  --secondary: #D85A30;
-  --accent: #F5C4B3;
-  --text: #2C2C2A;
-  --muted: #6C5B55;
-  --border: rgba(44, 44, 42, 0.12);
+  --surface-soft: #ECFDF5;
+  --primary: #15803D;
+  --primary-rgb: 21, 128, 61;
+  --secondary: #E11D48;
+  --secondary-rgb: 225, 29, 72;
+  --accent: #DCFCE7;
+  --accent-rgb: 220, 252, 231;
+  --text: #17251C;
+  --text-rgb: 23, 37, 28;
+  --muted: #5F7468;
+  --border: rgba(23, 37, 28, 0.12);
+  --shell-gradient: linear-gradient(180deg, #FAFFFC 0%, var(--bg) 100%);
+  --panel-gradient: linear-gradient(180deg, rgba(var(--accent-rgb), 0.44), rgba(255, 255, 255, 0.92));
+  --card-bg: rgba(255, 255, 255, 0.94);
+  --card-border: rgba(var(--text-rgb), 0.08);
+  --card-shadow: 0 14px 32px rgba(var(--text-rgb), 0.05);
+  --hover-bg: rgba(var(--secondary-rgb), 0.1);
+  --input-bg: var(--surface-soft);
+  --focus-ring: rgba(var(--accent-rgb), 0.36);
+  --danger: #F59E0B;
+  --danger-rgb: 245, 158, 11;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .btn {
@@ -23,27 +47,64 @@
   color: #fff;
 }
 
+.btn-secondary {
+  background: var(--secondary);
+  color: #fff;
+  border: 1px solid rgba(var(--secondary-rgb), 0.22);
+}
+
 .btn-sec {
-  background: var(--primary);;
+  background: var(--primary);
   color: var(--accent);
-  border: 1px solid rgba(153, 60, 29, 0.18);
+  border: 1px solid rgba(var(--primary-rgb), 0.18);
 }
 
 .btn-ghost {
-  background: var(--secondary);
-  color: var(--accent);
-  border: 1px solid rgba(44, 44, 42, 0.12);
+  background: var(--danger);
+  color: #fff;
+  border: 1px solid rgba(var(--danger-rgb), 0.22);
 }
 
 .btn:hover {
   transform: translateY(-1px);
 }
 
+.app-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.app-badge {
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.42);
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.app-panel {
+  background: var(--panel-gradient);
+  border: 1px solid rgba(var(--secondary-rgb), 0.14);
+}
+
+.form-control,
+.form-select {
+  border-color: var(--border);
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.2rem var(--focus-ring);
+}
+
 .table-card {
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(44, 44, 42, 0.08);
-  box-shadow: 0 12px 24px rgba(44, 44, 42, 0.04);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
 }
 
 .table-scroll {
@@ -57,12 +118,12 @@
 }
 
 .table-scroll::-webkit-scrollbar-thumb {
-  background: rgba(153, 60, 29, 0.35);
+  background: rgba(var(--primary-rgb), 0.35);
   border-radius: 999px;
 }
 
 .table-scroll::-webkit-scrollbar-track {
-  background: rgba(245, 196, 179, 0.15);
+  background: rgba(var(--accent-rgb), 0.2);
 }
 
 .data-table {
@@ -78,7 +139,7 @@
 }
 
 .data-table thead {
-  background: rgba(245, 196, 179, 0.16);
+  background: rgba(var(--accent-rgb), 0.2);
 }
 
 .data-table th {
@@ -89,7 +150,7 @@
 }
 
 .data-table tbody tr {
-  border-bottom: 1px solid rgba(44, 44, 42, 0.08);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .data-table tbody tr:last-child {
